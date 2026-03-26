@@ -50,6 +50,19 @@
     background: linear-gradient(135deg, var(--accent), var(--accent2));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   }
+  .nav-logo-img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(124,106,247,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-logo-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(124,106,247,0.6);
+}
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
     color: var(--muted); text-decoration: none;
@@ -321,7 +334,9 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">SS</div>
+ <a href="#hero">
+  <img src="profile.jpeg" class="nav-logo-img" alt="Profile Logo">
+</a>
   <ul class="nav-links">
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
